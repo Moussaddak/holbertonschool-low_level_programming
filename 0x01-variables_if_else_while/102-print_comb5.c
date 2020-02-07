@@ -27,7 +27,7 @@ f = c;
 k++;
 e = k;
 }
-putchar(',');
+putchar(44);
 putchar(32);
 }
 }
