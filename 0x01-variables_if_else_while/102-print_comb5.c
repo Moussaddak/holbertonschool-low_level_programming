@@ -14,6 +14,7 @@ for (f = 0; f <= 9; f++)
 {
 for (e = 0; e <= 9; e++)
 {
+putchar(32);
 putchar(c + 48);
 putchar(k + 48);
 putchar(32);
@@ -28,7 +29,6 @@ k++;
 e = k;
 }
 putchar(',');
-putchar(32);
 }
 }
 }
