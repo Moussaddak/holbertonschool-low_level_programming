@@ -14,20 +14,19 @@ for (f = 0; f <= 9; f++)
 {
 for (e = 0; e <= 9; e++)
 {
-
 putchar(c + 48);
 putchar(k + 48);
 putchar(32);
 putchar(f + 48);
 putchar(e + 48);
+if (c == 9 && k == 8 && f == 9 && e == 9)
+break;
 if (f == 9 && e == 9 && k < 9)
 {
 f = c;
 k++;
 e = k;
 }
-if (c == 9 && k == 8 && f == 9 && e == 9)
-break;
 putchar(',');
 putchar(32);
 }
