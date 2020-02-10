@@ -8,7 +8,7 @@ int main(void)
 int c, k, f, e;
 for (c = 0; c <= 9; c++)
 {
-for (k = 0; k < 9; k++)
+for (k = 0; k <= 9; k++)
 {
 for (f = 0; f <= 9; f++)
 {
@@ -21,7 +21,7 @@ putchar(f + 48);
 putchar(e + 48);
 if (c == 9 && k == 8 && f == 9 && e == 9)
 break;
-if (f == 9 && e == 9 && k < 9)
+if (f == 9 && e == 9 && k < 9 && c < 9)
 {
 f = c;
 k++;
