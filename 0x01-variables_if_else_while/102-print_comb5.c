@@ -21,7 +21,7 @@ putchar(f + 48);
 putchar(e + 48);
 if (c == 9 && k == 8 && f == 9 && e == 9)
 break;
-if (f == 9 && e == 9 && k < 9)
+if (f == 9 && e == 9 && k <= 9)
 {
 f = c;
 k++;
