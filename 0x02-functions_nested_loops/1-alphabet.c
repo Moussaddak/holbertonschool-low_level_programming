@@ -1,4 +1,4 @@
-#include"holberton.h"
+#include "holberton.h"
 /**
  * print_alphabet - function that print lowercase alphabet
  *@c: character to be printed
