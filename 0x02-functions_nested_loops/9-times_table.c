@@ -20,7 +20,7 @@ _putchar(' ');
 _putchar(' ');
 _putchar(n + '0');
 }
-else 
+else
 {
 _putchar(',');
 _putchar(' ');
