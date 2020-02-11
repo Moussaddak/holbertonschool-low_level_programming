@@ -28,8 +28,11 @@ _putchar(n + '0');
 }
 if (j < 9)
 _putchar(',');
-else
+ else
+{
+_putchar('$');
 _putchar('\n');
+}
 k++;
 }
 }
