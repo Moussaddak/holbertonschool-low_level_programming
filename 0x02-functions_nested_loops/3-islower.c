@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
  *_islower - test if a character is lowercase
  *@c: caracter that will be tested
@@ -9,4 +10,5 @@ if (c >= 97 && c <= 122)
 return (1);
 else
 return (0);
+_putchar('\n');
 }
