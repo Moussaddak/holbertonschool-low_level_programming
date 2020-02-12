@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-long p1 = 0, p2 = 1, next;
+int p1 = 0, p2 = 1, next;
 int i;
 for (i = 1; i <= 50; i++)
 {
