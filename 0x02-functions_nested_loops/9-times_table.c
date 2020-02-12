@@ -27,9 +27,8 @@ _putchar(' ');
 _putchar((n / 10) + '0');
 _putchar((n % 10) + '0');
 }
-if (j == 8)
-_putchar('\n');
 k++;
 }
+_putchar('\n');
 }
 }
