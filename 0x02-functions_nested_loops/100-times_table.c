@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
- *times_table - prints the n times table, starting with 0
+ *print_times_table - prints the n times table, starting with 0
+ *@n: input
  *Return: 0
  */
 void print_times_table(int n)
@@ -36,7 +37,7 @@ else
 _putchar(',');
 _putchar(' ');
 _putchar((q / 100) + '0');
-_putchar(((q % 100)/10) + '0');
+_putchar(((q % 100) / 10) + '0');
 _putchar((q % 10) + '0');
 }
 k++;
