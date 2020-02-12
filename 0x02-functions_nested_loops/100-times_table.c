@@ -20,17 +20,20 @@ if (q <= 9)
 _putchar(',');
 _putchar(' ');
 _putchar(' ');
+_putchar(' ');
 _putchar(q + '0');
 }
 else if (q > 9 && q <= 99)
 {
 _putchar(',');
 _putchar(' ');
+_putchar(' ');
 _putchar((q / 10) + '0');
 _putchar((q % 10) + '0');
 }
 else
 {
+_putchar(',');
 _putchar(' ');
 _putchar((q / 100) + '0');
 _putchar(((q % 100)/10) + '0');
