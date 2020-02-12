@@ -4,7 +4,7 @@
  *@n: input
  *Return: 0
  */
-void times_table(int n)
+void print_times_table(int n)
 {
 int i, j, k, q;
 if (n < 15 && n > 0)
