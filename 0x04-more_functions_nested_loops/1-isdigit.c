@@ -1,5 +1,6 @@
 /**
- *_isdigit: test if the character is digit
+ *_isdigit- test if the character is digit
+ *@c: input
  *Return: 1 if digit / 0 if not
  */
 int _isdigit(int c)
