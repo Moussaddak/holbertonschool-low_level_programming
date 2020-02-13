@@ -1,4 +1,3 @@
-#include "holberton.h"
 /**
  *_isupper- test if the character
  *@c: input
