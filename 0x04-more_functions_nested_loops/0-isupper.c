@@ -1,5 +1,6 @@
 /**
  *_isupper: test if the character
+ *@c: input
  *Return: 1 if uppercase / 0 if not
  */
 int _isupper(int c)
