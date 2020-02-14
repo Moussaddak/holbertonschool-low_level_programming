@@ -31,6 +31,6 @@ if (n == 1)
 test = 0;
 }
 }
-printf("%d", prime);
+printf("%d\n", prime);
 return (0);
 }
