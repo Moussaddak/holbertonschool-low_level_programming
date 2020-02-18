@@ -5,13 +5,15 @@
  */
 void puts2(char *str)
 {
-char *p;
-p = str;
+char *s;
+int i = 0;
+s = str;
 do {
-if (*p % 2 == 0)
-_putchar(*str);
-p++;
-str++;
-} while (*str != '\0');
+if (i % 2 == 0)
+_putchar(*s);
+i++;
+s++;
+} while (*s != '\0');
 _putchar('\n');
 }
+
