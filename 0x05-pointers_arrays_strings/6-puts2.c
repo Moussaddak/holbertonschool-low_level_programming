@@ -5,11 +5,12 @@
  */
 void puts2(char *str)
 {
-int i = 0;
+char *p;
+p = str;
 do {
-if (i % 2 == 0)
+if (*p % 2 == 0)
 _putchar(*str);
-i++;
+p++;
 str++;
 } while (*str != '\0');
 _putchar('\n');
