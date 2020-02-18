@@ -12,7 +12,8 @@ for (i = 1; i <= n; i++)
 if (i != n)
 printf("%d, ", *a);
 else
-printf("%d\n", *a);
+printf("%d", *a);
 a++;
 }
+printf("\n");
 }
