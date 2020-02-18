@@ -13,7 +13,10 @@ while (*p != '\0')
 len++;
 p++;
 }
+if (len % 2 == 0)
 p = str + len / 2;
+else
+p = str + (len / 2) + 1;
 for (i = 0; *p != '\0'; i++)
 {
 _putchar(*p);
