@@ -6,11 +6,12 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-int i;
-for (i = 0; *src != '\0'; i++)
+char *r = dest;
+while (*src != '\0')
 {
 *dest = *src;
 src++;
+dest++;
 }
-return (dest);
+return (r);
 }
