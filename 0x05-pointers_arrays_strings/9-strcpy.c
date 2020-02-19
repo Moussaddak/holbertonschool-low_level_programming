@@ -10,7 +10,6 @@ int i;
 for (i = 0; *src != '\0'; i++)
 {
 *dest = *src;
-dest++;
 src++;
 }
 return (dest);
