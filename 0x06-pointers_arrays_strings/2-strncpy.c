@@ -17,7 +17,7 @@ src++;
 dest++;
 i++;
 }
-for(; i < n; i++)
+for (; i < n; i++)
 *dest = '\0';
 return (r);
 }
