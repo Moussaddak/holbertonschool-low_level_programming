@@ -6,8 +6,10 @@
 char *rot13(char *s)
 {
 char *r = s;
-char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char code[] = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
+int i;
+char *code = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
+char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 while (*s != '\0')
 {
 i = 0;
@@ -15,7 +17,7 @@ while (i < 53)
 {
 if (*s == alpha[i])
 *s = code[i];
-i++
+i++;
 }
 s++;
 }
