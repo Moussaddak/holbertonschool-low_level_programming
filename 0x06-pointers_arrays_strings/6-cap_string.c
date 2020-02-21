@@ -17,7 +17,7 @@ while (*s != '\0')
 {
 i = 0;
 test = 1;
-while (i < 15 && test)
+while (i < 13 && test)
 {
 if (*s == l[i])
 {
