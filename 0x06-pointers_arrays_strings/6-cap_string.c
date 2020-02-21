@@ -12,11 +12,11 @@ char *cap_string(char *s)
 
 	if (*s >= 97 && *s <= 122)
 		*s -= 32;
-	s++;
 	while (*s != '\0')
 	{
 		i = 0;
 		test = 1;
+		s++;
 		while (i < 13 && test)
 		{
 			if (*s == l[i])
@@ -27,10 +27,11 @@ char *cap_string(char *s)
 					*s -= 32;
 					test = 0;
 				}
+				else if (*s == '\0')
+				test = 0;
 			}
 			i++;
 		}
-		s++;
 	}
 	return (r);
 }
