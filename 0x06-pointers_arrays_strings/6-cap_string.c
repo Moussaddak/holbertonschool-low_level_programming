@@ -17,7 +17,7 @@ char *cap_string(char *s)
 	{
 		i = 0;
 		test = 1;
-		while (i < 15 && test)
+		while (i < 13 && test)
 		{
 			if (*s == l[i])
 			{
@@ -27,8 +27,6 @@ char *cap_string(char *s)
 					*s -= 32;
 					test = 0;
 				}
-				else
-					test = 1;
 			}
 			i++;
 		}
