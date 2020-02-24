@@ -7,6 +7,7 @@
  */
 char *_strchr(char *s, char c)
 {
+<<
 	int i = 0;
 	char *r;
 
@@ -17,6 +18,8 @@ char *_strchr(char *s, char c)
 	{
 		if (*(s + i) == c)
 			r = s + i;
+		}
+		i++;
 	}
 	return (r);
 }
