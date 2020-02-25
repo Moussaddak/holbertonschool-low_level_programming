@@ -13,7 +13,7 @@ r = NULL;
 	while (*(needle + j) != '\0')
 	j++;
 
-	while (*(haystack + i) != '\0')
+	while (*(haystack + i) != '\0' && *needle != '\0')
 	{
 		if (*(haystack + i) == *needle)
 		{
@@ -23,12 +23,15 @@ r = NULL;
 		}
 		i++;
 	}
-	while ((*(r + i) != '\0' && *(needle + k) != '\0') && key)
+	while (k < j && key)
 	{
 		if (*(haystack + i) == *(needle + k))
 			test = 1;
 		else
+		{
 			test = 0;
+			break;
+		}
 		i++;
 		k++;
 	}
