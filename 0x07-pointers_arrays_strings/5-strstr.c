@@ -12,7 +12,7 @@ char *r;
 r = NULL;
 	while (*(needle + j) != '\0')
 	j++;
-	if (*(needle + j) == '\0')
+	if (*needle == '\0')
 		r = haystack;
 	while (*(haystack + i) != '\0')
 	{
