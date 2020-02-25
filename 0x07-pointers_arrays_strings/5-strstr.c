@@ -12,7 +12,8 @@ char *r;
 r = NULL;
 	while (*(needle + j) != '\0')
 	j++;
-
+	if (*(needle + j) == '\0')
+		r = haystack;
 	while (*(haystack + i) != '\0')
 	{
 		if (*(haystack + i) == *needle)
@@ -20,10 +21,10 @@ r = NULL;
 			key = 1;
 			r = haystack + i;
 		}
-	       	while (k < j && key)
-		  {
+		while (k < j && key)
+		{
 			if (*(haystack + i) != *(needle + k))
-			  {
+			{
 				k = 0;
 				key = 0;
 				r = NULL;
@@ -35,7 +36,7 @@ r = NULL;
 		if (k == j)
 			break;
 		i++;
-       	}
+	}
 
 return (r);
 }
