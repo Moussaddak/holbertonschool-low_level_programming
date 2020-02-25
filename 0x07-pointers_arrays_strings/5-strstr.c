@@ -19,21 +19,24 @@ r = NULL;
 		{
 			key = 1;
 			r = haystack + i;
-			break;
 		}
-		i++;
-	}
-	while (k < j && key)
-	{
-		if (*(haystack + i) == *(needle + k))
-			test = 1;
-		else
+		while (k < j && key)
 		{
-			test = 0;
-			break;
+			if (*(haystack + i) == *(needle + k))
+				test = 1;
+			else
+			{
+				k = 0;
+				key = 0;
+				test = 0;
+				break;
+			}
+			i++;
+			k++;
 		}
+		if (k == j)
+		break;
 		i++;
-		k++;
 	}
 	if (test == 0)
 		r = NULL;
