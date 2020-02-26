@@ -5,14 +5,14 @@
  */
 void _puts_recursion(char *s)
 {
-	char *r = s;
+	
 
-	if (*r == '\0')
+	if (*s == '\0')
 	{
 		_putchar('\n');
 		return;
 	}
-	_putchar(*r);
-	r++;
-	_puts_recursion(r);
+	_putchar(*s);
+	s++;
+	_puts_recursion(s);
 }
