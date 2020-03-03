@@ -23,11 +23,11 @@ char *cp;
 	}
 	else
 	{
-		for (; j <= i; j++)
+		while (*(s + j) != '\0')
 		{
 			*(cp + j) = *(str + j);
+			j++;
 		}
-		*(cp + j) = '\0';
 		return (cp);
 	}
 
