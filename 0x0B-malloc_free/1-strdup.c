@@ -23,7 +23,7 @@ char *cp;
 	}
 	else
 	{
-		while (*(s + j) != '\0')
+		while (*(str + j) != '\0')
 		{
 			*(cp + j) = *(str + j);
 			j++;
