@@ -19,7 +19,7 @@ char *cp;
 	cp = malloc(i * sizeof(char) + 1);
 	if (cp == NULL)
 	{
-		return (NULL);
+		return (cp);
 	}
 	else
 	{
