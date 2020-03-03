@@ -16,7 +16,7 @@ char *cp;
 	{
 		return (NULL);
 	}
-	cp = malloc(i * sizeof(char));
+	cp = malloc(i * sizeof(char) + 1);
 	if (cp == NULL)
 	{
 		return (NULL);
