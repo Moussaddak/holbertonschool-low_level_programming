@@ -25,10 +25,9 @@ char *cp;
 		}
 		else
 		{
-			while (j <= i)
+			for (;j <= i; j++)
 			{
 				*(cp + j) = *(str + j);
-				j++;
 			}
 			return (cp);
 		}
