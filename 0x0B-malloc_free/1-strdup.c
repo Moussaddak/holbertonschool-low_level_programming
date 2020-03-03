@@ -12,20 +12,25 @@ char *cp;
 	{
 		i++;
 	}
-
-	cp = malloc(i * sizeof(char));
-
-	if (cp == NULL)
+	if (i == 0)
 	{
 		return (NULL);
 	}
 	else
 	{
-		while (j <= i)
+		cp = malloc(i * sizeof(char));
+		if (cp == NULL)
 		{
-			*(cp + j) = *(str + j);
-			j++;
+			return (NULL);
 		}
-		return (cp);
+		else
+		{
+			while (j <= i)
+			{
+				*(cp + j) = *(str + j);
+				j++;
+			}
+			return (cp);
+		}
 	}
 }
