@@ -21,14 +21,10 @@ char *cp;
 	{
 		return (cp);
 	}
-	else
+	while (*(str + j) != '\0')
 	{
-		while (*(str + j) != '\0')
-		{
-			*(cp + j) = *(str + j);
-			j++;
-		}
-		return (cp);
+		*(cp + j) = *(str + j);
+		j++;
 	}
-
+	return (cp);
 }
