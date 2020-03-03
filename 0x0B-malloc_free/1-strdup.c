@@ -16,20 +16,18 @@ char *cp;
 	{
 		return (NULL);
 	}
+	cp = malloc(i * sizeof(char));
+	if (cp == NULL)
+	{
+		return (NULL);
+	}
 	else
 	{
-		cp = malloc(i * sizeof(char));
-		if (cp == NULL)
+		for (; j <= i; j++)
 		{
-			return (NULL);
+			*(cp + j) = *(str + j);
 		}
-		else
-		{
-			for (;j <= i; j++)
-			{
-				*(cp + j) = *(str + j);
-			}
-			return (cp);
-		}
+		return (cp);
 	}
+
 }
