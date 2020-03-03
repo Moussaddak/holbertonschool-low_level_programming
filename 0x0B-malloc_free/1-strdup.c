@@ -27,6 +27,7 @@ char *cp;
 		{
 			*(cp + j) = *(str + j);
 		}
+		*(cp + j) = '\0';
 		return (cp);
 	}
 
