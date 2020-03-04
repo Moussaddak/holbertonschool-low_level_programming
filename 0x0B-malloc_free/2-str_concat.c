@@ -10,12 +10,12 @@ char *str_concat(char *s1, char *s2)
 int i = 0, j = 0, c = 0, f = 0;
 char *cat;
 
-	if (s2 == NULL && s1 == NULL)
-		return (NULL);
+	if (s2 != NULL  && s1 == NULL)
+		return (s2);
 	else if (s2 == NULL && s1 != NULL)
 		return (s1);
-	else if (s1 == NULL && s2 != NULL)
-		return (s2);
+	else
+		return (NULL);
 	while (*(s2 + i) != '\0')
 		i++;
 	while (*(s1 + j) != '\0')
