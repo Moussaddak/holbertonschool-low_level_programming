@@ -11,9 +11,17 @@ char *str_concat(char *s1, char *s2)
 int i = 0, j = 0, c = 0, f = 0;
 char *cat;
 
-	if (s2 == NULL || s1 == NULL)
+	if (s2 == NULL && s1 == NULL)
 	{
 		return (NULL);
+	}
+	else if (s2 == NULL)
+	{
+		return (s1);
+	}
+	else
+	{
+		return (s2);
 	}
 	while (*(s2 + i) != '\0')
 	{
