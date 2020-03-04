@@ -7,7 +7,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-int i = 1, j = 1, c = 0, f = 0;
+int i = 0, j = 0, c = 0, f = 0;
 char *cat;
 
 	if (s1 == NULL && s2 != NULL)
@@ -43,7 +43,7 @@ char *cat;
 			}
 			c++;
 		}
-		return (cat);
 	}
 	}
+	return (cat);
 }
