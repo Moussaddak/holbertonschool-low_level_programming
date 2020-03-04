@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 /**
  *str_concat - concatinate s2 into s1
@@ -12,25 +11,15 @@ int i = 0, j = 0, c = 0, f = 0;
 char *cat;
 
 	if (s2 == NULL && s1 == NULL)
-	{
 		return (NULL);
-	}
 	else if (s2 == NULL && s1 != NULL)
-	{
 		return (s1);
-	}
 	else if (s1 == NULL && s2 != NULL)
-	{
 		return (s2);
-	}
 	while (*(s2 + i) != '\0')
-	{
 		i++;
-	}
 	while (*(s1 + j) != '\0')
-	{
 		j++;
-	}
 	cat = malloc((i + j + 1) * sizeof(char));
 	if (cat == NULL)
 	{
