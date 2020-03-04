@@ -11,4 +11,5 @@ int i;
 	{
 		free(*(grid + i));
 	}
+	free(grid);
 }
