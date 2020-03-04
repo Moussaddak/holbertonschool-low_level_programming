@@ -16,6 +16,8 @@ char *cat;
 		return (s1);
 	else if (s1 == NULL && s2 == NULL)
 		return (NULL);
+	else
+	{
 	while (*(s2 + i) != '\0')
 		i++;
 	while (*(s1 + j) != '\0')
@@ -42,5 +44,6 @@ char *cat;
 			}
 		}
 		return (cat);
+	}
 	}
 }
