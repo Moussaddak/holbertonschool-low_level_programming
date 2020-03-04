@@ -7,15 +7,18 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-int i = 0, j = 0, c = 0, f = 0;
+int i = 1, j = 1, c = 0, f = 0;
 char *cat;
 
-	if (s2 != NULL  && s1 == NULL)
-		return (s2);
+	if (s1 == NULL && s2 != NULL)
+		s1 = "";
 	else if (s2 == NULL && s1 != NULL)
-		return (s1);
+		s2 = "";
 	else if (s1 == NULL && s2 == NULL)
-		return (NULL);
+	{
+		s1 = "";
+		s2 = "";
+	}
 	else
 	{
 	while (*(s2 + i) != '\0')
@@ -32,16 +35,13 @@ char *cat;
 		while (c <= (i + j))
 		{
 			if (c < j)
-			{
 				*(cat + c) = *(s1 + c);
-				c++;
-			}
 			else
 			{
 				*(cat + c) = *(s2 + f);
-				c++;
 				f++;
 			}
+			c++;
 		}
 		return (cat);
 	}
