@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 /**
  *alloc_grid -  two dimensional grid
  *@width: input
@@ -7,26 +8,34 @@
  */
 int **alloc_grid(int width, int height)
 {
-int matrix, i, j;
+int **matrix, i = 0, j, k;
 
-	if ((width * height) <= 0 || height < 0 || width < 0)
+	if (height <= 0 || width <= 0)
 	{
 		return (NULL);
 	}
-	matrix = malloc(width * height * sizeof(int));
+	matrix = malloc(height * sizeof(int *));
 	if (matrix == NULL)
 	{
-		return (matrix);
+		free(matrix);
+		return (NULL);
 	}
-	else
+	while (i < height)
 	{
-		for (i = 0; i < height; i++)
+		*(matrix + i) = malloc(width * sizeof(int));
+		if ((matrix + i) == NULL)
 		{
-			for (j = 0; j < width; j++)
-			{
-				*(*(matrix + i) + j) = 0;
-			}
+			free(matrix);
+			return (NULL);
 		}
-		return (matrix);
+		i++;
 	}
+	for (k = 0; k < height; k++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			*(*(matrix + k) + j) = 0;
+		}
+	}
+	return (matrix);
 }
