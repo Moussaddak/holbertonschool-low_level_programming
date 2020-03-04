@@ -8,6 +8,12 @@ char *_strdup(char *str)
 {
 int i = 0, j = 0;
 char *cp;
+	if (str == NULL)
+	{
+		return (str);
+	}
+	else
+	{
 	while (*(str + i) != '\0')
 	{
 		i++;
@@ -25,6 +31,7 @@ char *cp;
 	{
 		*(cp + j) = *(str + j);
 		j++;
+	}
 	}
 	return (cp);
 }
