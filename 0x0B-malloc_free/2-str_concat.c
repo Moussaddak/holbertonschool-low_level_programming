@@ -19,8 +19,7 @@ char *cat;
 		s1 = "";
 		s2 = "";
 	}
-	else
-	{
+
 	while (*(s2 + i) != '\0')
 		i++;
 	while (*(s1 + j) != '\0')
@@ -43,7 +42,6 @@ char *cat;
 			}
 			c++;
 		}
-	}
 	}
 	return (cat);
 }
