@@ -40,6 +40,7 @@ unsigned int j = 0;
 			{	*(s + ct) = *(s2 + in);
 				in++;	}
 		}
+		*(s + ct + 1) = '\0';
 	}
 	return (s);
 }
