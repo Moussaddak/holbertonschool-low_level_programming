@@ -7,10 +7,10 @@
  *@av: input
  *Return: always 0;
  */
-int main(int ac, int **av)
+int main(int ac, char **av)
 {
 	int num1, num2;
-	char s;
+	char *s;
 
 	if (ac != 4)
 	{
@@ -19,19 +19,19 @@ int main(int ac, int **av)
 	}
 	num1 = atoi(*(av + 1));
 	num2 = atoi(*(av + 3));
-	s = *(av + 2);
-	if ( (*get_op_func(s))(num1, num2) == NULL)
+	s = (char*) av[2];
+	if ( (*get_op_func(s)) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if (((*get_op_func(s))(num1, num2) == op_div ||
-	     (*get_op_func(s))(num1, num2) == op_mod) && num2 == 0)
+	if (((*get_op_func(s)) == op_div ||
+	     (*get_op_func(s)) == op_mod) && num2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	(*get_op_func(s))(num1, num2);
 
-	return (0);
+	return ((*get_op_func(s))(num1, num2));
+
 }
