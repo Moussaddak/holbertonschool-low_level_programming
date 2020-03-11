@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "dog.h"
+char *_strdup(char *str);
 /**
  *new_dog - function stores dog info
  *@name: input
@@ -9,5 +10,55 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	dog_t *dog;
 
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+	{
+		return (NULL);
+	}
+	dog->name = _strdup(name);
+	dog->age = age;
+	dog->owner = _strdup(owner);
+	if (name == NULL || owner == NULL)
+	{
+		free(dog->name);
+		free(dog->owner);
+		free(dog);
+		return (NULL);
+	}
+	return (dog);
+}
+/**
+ *_strdup -  duplicate of the string pointed to by str
+ *@str: input
+ *Return: string
+ */
+char *_strdup(char *str)
+{
+	int i = 0, j = 0;
+	char *cp;
+
+	if (str == NULL || str == '\0')
+	{
+		return (str);
+	}
+	else
+	{
+		while (*(str + i) != '\0')
+		{
+			i++;
+		}
+		cp = malloc(i * sizeof(char) + 1);
+		if (cp == NULL)
+		{
+			return (cp);
+		}
+		while (*(str + j) != '\0')
+		{
+			*(cp + j) = *(str + j);
+			j++;
+		}
+	}
+	return (cp);
 }
