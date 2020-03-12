@@ -1,6 +1,44 @@
 #include <stdlib.h>
 #include "dog.h"
 
+char *_strdup(char *str);
+
+/**
+ *new_dog - function stores dog info
+ *@name: input
+ *@age: input
+ *@owner: input
+ *Return: type struct dog pointer
+ */
+dog_t *new_dog(char *name, float age, char *owner)
+{
+	dog_t *dog;
+	char *n, *o;
+
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+	{
+		return (NULL);
+	}
+
+	n = _strdup(name);
+	o = _strdup(owner);
+
+	if (n == NULL || o == NULL)
+	{
+		free(n);
+		free(o);
+		free(dog);
+		return (NULL);
+	}
+
+	dog->name = name;
+	dog->age = age;
+	dog->owner = owner;
+
+	return (dog);
+}
+
 /**
  *_strdup -  duplicate of the string pointed to by str
  *@str: input
@@ -34,42 +72,4 @@ char *_strdup(char *str)
 	}
 
 	return (cp);
-}
-
-
-
-/**
- *new_dog - function stores dog info
- *@name: input
- *@age: input
- *@owner: input
- *Return: type struct dog pointer
- */
-dog_t *new_dog(char *name, float age, char *owner)
-{
-	dog_t *dogg;
-	char *n, *o;
-
-	dogg = malloc(sizeof(dog_t));
-	if (dogg == NULL)
-	{
-		return (NULL);
-	}
-
-	n = _strdup(name);
-	o = _strdup(owner);
-
-	if (n == NULL || o == NULL)
-	{
-		free(n);
-		free(o);
-		free(dogg);
-		return (NULL);
-	}
-
-	dogg->name = name;
-	dogg->age = age;
-	dogg->owner = owner;
-
-	return (dogg);
 }
