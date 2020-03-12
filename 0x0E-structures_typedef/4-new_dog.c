@@ -10,11 +10,11 @@ char *_strdup(char *str);
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog;
+	dog_t *dogg;
 	char *n, *o;
 
-	dog = malloc(sizeof(dog_t));
-	if (dog == NULL)
+	dogg = malloc(sizeof(dog_t));
+	if (dogg == NULL)
 	{
 		return (NULL);
 	}
@@ -26,15 +26,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(n);
 		free(o);
-		free(dog);
+		free(dogg);
 		return (NULL);
 	}
 
-	dog->name = name;
-	dog->age = age;
-	dog->owner = owner;
+	dogg->name = name;
+	dogg->age = age;
+	dogg->owner = owner;
 
-	return (dog);
+	return (dogg);
 }
 /**
  *_strdup -  duplicate of the string pointed to by str
