@@ -59,7 +59,7 @@ char *_strdup(char *str)
 		cp = malloc(i * sizeof(char) + 1);
 		if (cp == NULL)
 		{
-			return (cp);
+			return (NULL);
 		}
 		while (*(str + j) != '\0')
 		{
