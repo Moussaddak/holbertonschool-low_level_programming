@@ -19,7 +19,7 @@ int main(int ac, char **av)
 		printf("Error\n");
 		exit(98);
 	}
-	else if (get_op_func(s) == NULL && *(*(av + 2) + 1) != '\0')
+	else if (get_op_func(s) == NULL || *(*(av + 2) + 1) != '\0')
 	{
 		printf("Error\n");
 		exit(99);
