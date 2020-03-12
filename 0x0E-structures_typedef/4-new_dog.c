@@ -46,9 +46,9 @@ char *_strdup(char *str)
 	int i = 0, j = 0;
 	char *cp;
 
-	if (str == NULL || str == '\0')
+	if (str == NULL || *str == '\0')
 	{
-		return (str);
+		return (NULL);
 	}
 	else
 	{
