@@ -26,7 +26,7 @@ int main(int ac, char **av)
 		exit(99);
 	}
 	else if (((*get_op_func(s)) == op_div ||
-	     (*get_op_func(s)) == op_mod) && num2 == 0)
+		  (*get_op_func(s)) == op_mod) && *(*(av + 3)) == 0)
 	{
 		printf("Error\n");
 		exit(100);
