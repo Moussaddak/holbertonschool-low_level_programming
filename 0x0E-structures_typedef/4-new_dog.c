@@ -50,22 +50,23 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	else
+
+	while (*(str + i) != '\0')
 	{
-		while (*(str + i) != '\0')
-		{
-			i++;
-		}
-		cp = malloc(i * sizeof(char) + 1);
-		if (cp == NULL)
-		{
-			return (NULL);
-		}
-		while (*(str + j) != '\0')
-		{
-			*(cp + j) = *(str + j);
-			j++;
-		}
+		i++;
 	}
+
+	cp = malloc(i * sizeof(char) + 1);
+	if (cp == NULL)
+	{
+		return (NULL);
+	}
+
+	while (str[j] != '\0')
+	{
+		cp[j] = str[j];
+		j++;
+	}
+
 	return (cp);
 }
