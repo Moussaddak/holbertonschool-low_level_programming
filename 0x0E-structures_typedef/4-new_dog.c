@@ -1,6 +1,43 @@
 #include <stdlib.h>
 #include "dog.h"
-char *_strdup(char *str);
+
+/**
+ *_strdup -  duplicate of the string pointed to by str
+ *@str: input
+ *Return: string
+ */
+char *_strdup(char *str)
+{
+	int i = 0, j = 0;
+	char *cp;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	while (*(str + i) != '\0')
+	{
+		i++;
+	}
+
+	cp = malloc(i * sizeof(char) + 1);
+	if (cp == NULL)
+	{
+		return (NULL);
+	}
+
+	while (*(str + j) != '\0')
+	{
+		*(cp + i) = *(str + j);
+		j++;
+	}
+
+	return (cp);
+}
+
+
+
 /**
  *new_dog - function stores dog info
  *@name: input
@@ -35,38 +72,4 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dogg->owner = owner;
 
 	return (dogg);
-}
-/**
- *_strdup -  duplicate of the string pointed to by str
- *@str: input
- *Return: string
- */
-char *_strdup(char *str)
-{
-	int i = 0, j = 0;
-	char *cp;
-
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-
-	while (*(str + i) != '\0')
-	{
-		i++;
-	}
-
-	cp = malloc(i * sizeof(char) + 1);
-	if (cp == NULL)
-	{
-		return (NULL);
-	}
-
-	while (*(str + j) != '\0')
-	{
-		*(cp + i) = *(str + j);
-		j++;
-	}
-
-	return (cp);
 }
