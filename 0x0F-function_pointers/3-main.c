@@ -14,13 +14,14 @@ int main(int ac, char **av)
 
 	s = av[2];
 
+	printf("av[2][1]= %c\n", av[2][1]);
 	if (ac != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	else if (((*get_op_func(s)) == NULL) &&
-		 *(*(av + 2) + 1) == '\0')
+	else if ((((*get_op_func(s)) == NULL) ||
+		  (*get_op_func(s)) != NULL) && *(*(av + 2) + 1) != '\0')
 	{
 		printf("Error\n");
 		exit(99);
