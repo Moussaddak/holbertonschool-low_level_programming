@@ -13,7 +13,7 @@ int main(int ac, char **av)
 	char *s;
 
 	s = av[2];
-	/*printf("av[2]= %s\n",av[2]);*/
+
 	if (ac != 4)
 	{
 		printf("Error\n");
@@ -22,7 +22,6 @@ int main(int ac, char **av)
 	else if ((*get_op_func(s) == NULL ||
 		  *get_op_func(s) != NULL) && *(*(av + 2) + 1) != '\0')
 	{
-		printf("Error\n");
 		exit(99);
 	}
 	else if ((*get_op_func(s) == op_div ||
