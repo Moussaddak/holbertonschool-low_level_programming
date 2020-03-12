@@ -18,13 +18,14 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
+	/*printf("av[2]= %s \n", s);*/
 	while (i < 5)
-	{
+	{ /*printf("ops[%d].op = %s\n",i,ops[i].op);*/
 		if (*s == *ops[i].op)
 		{
 			return (ops[i].f);
 		}
 		i++;
-	}
-	return (NULL);
+	}/*printf("\n\nfin\n\n");*/
+	return (ops[5].f);
 }
