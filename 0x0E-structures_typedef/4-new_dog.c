@@ -66,7 +66,7 @@ char *_strdup(char *str)
 
 	while (*(str + j) != '\0')
 	{
-		(cp + j) = (str + j);
+		cp[j] = str[j];
 		j++;
 	}
 
