@@ -70,7 +70,7 @@ char *_strdup(char *str)
 		j++;
 	}
 
-	/**(cp + j) = '\0';*/
+	*(cp + j) = '\0';
 
 	return (cp);
 }
