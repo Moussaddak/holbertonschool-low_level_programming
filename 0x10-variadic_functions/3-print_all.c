@@ -8,7 +8,7 @@
 void print_all(const char * const format, ...)
 {
 	unsigned int i = 0, j = 0, flag, k, args;
-	char *str, *type;
+	char *str;
 	list lst[] = {
 		{'c', "%c", "char"},
 		{'i', "%i", "int"},
@@ -25,8 +25,8 @@ void print_all(const char * const format, ...)
 	va_start(ap, args);
 	while (*(format + j) != '\0')
 	{
-		//type = lst[j].ty;
-		str = va_arg(ap, lst[j].ty);
+		type = lst[j].ty;
+		str = va_arg(ap, type);
 		k = 0;
 		flag = 1;
 			while (k < 4 && flag)
