@@ -11,7 +11,7 @@ void print_string(va_list p);
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int args = 0, j = 0, flag, k;
+	unsigned int j = 0, flag, k;
 	char *s = "";
 	list lst[] = {
 		{'c', print_char},
@@ -22,10 +22,6 @@ void print_all(const char * const format, ...)
 	va_list ap;
 
 	va_start(ap, format);
-	while (*(format + args) != '\0')
-	{
-		args++;
-	}
 	while (*(format + j) != '\0' && format != NULL)
 	{
 		k = 0;
