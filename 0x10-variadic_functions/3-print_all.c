@@ -22,7 +22,7 @@ void print_all(const char * const format, ...)
 	va_list ap;
 
 	va_start(ap, format);
-	while (*(format + j) && format)
+	while (format && *(format + j))
 	{
 		k = 0;
 		flag = 1;
