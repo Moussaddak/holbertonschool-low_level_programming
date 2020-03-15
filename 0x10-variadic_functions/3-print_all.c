@@ -12,6 +12,7 @@ void print_string(va_list p);
 void print_all(const char * const format, ...)
 {
 	unsigned int args = 0, j = 0, flag, k;
+	char *s = "";
 	list lst[] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -33,14 +34,10 @@ void print_all(const char * const format, ...)
 		{
 			if (format[j] == lst[k].c && k < args - 1)
 			{
+				printf("%s", s);
 				flag = 0;
 				lst[k].f(ap);
-				printf(", ");
-			}
-			if (format[j] == lst[k].c && k == args - 1)
-			{
-				flag = 0;
-				lst[j].f(ap);
+				s = ", ";
 			}
 			k++;
 		}
@@ -86,9 +83,8 @@ void print_string(va_list p)
 	if (s == NULL)
 	{
 		printf("(nil)");
+		return;
 	}
-	else
-	{
-		printf("%s", s);
-	}
+
+	printf("%s", s);
 }
