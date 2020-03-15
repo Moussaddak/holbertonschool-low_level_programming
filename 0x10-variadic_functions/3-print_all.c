@@ -39,8 +39,8 @@ void print_all(const char * const format, ...)
 		}
 		j++;
 	}
-	va_end(ap);
 	printf("\n");
+	va_end(ap);
 }
 /**
  *print_char - display a character
