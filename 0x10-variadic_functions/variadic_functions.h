@@ -6,14 +6,13 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 /**
  * struct list - a list of types of arguments.
- * @cr: First member
- * @ty: Second member
+ * @c: First member
+ * @f: Second member
  *
  * Description: a list of types of arguments passed to the function
  */
 typedef struct list {
 	char c;
-	char *cr;
-	char *ty;
+	void (*f)(va_list p);
 }list;
 #endif
