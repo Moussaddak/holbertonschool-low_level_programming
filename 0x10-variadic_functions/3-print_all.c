@@ -32,7 +32,7 @@ void print_all(const char * const format, ...)
 		flag = 1;
 		while (k < 4 && flag)
 		{
-			if (format[j] == lst[k].c && k < args - 1)
+			if (format[j] == lst[k].c)
 			{
 				printf("%s", s);
 				flag = 0;
