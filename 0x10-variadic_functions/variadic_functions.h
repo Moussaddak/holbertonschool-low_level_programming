@@ -12,8 +12,9 @@ void print_all(const char * const format, ...);
  *
  * Description: a list of types of arguments passed to the function
  */
-typedef struct list {
+typedef struct list
+{
 	char c;
 	void (*f)(va_list);
-}list;
+} list;
 #endif
