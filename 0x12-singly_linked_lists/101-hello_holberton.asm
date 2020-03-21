@@ -1,16 +1,20 @@
-	section .data
-	fmt    db "%s",10,0
-	msg    db "Hello, Holberton",0
+global main
 
 	section .text
-	extern printf
-	global main
+
 
 main:
-	mov  rsi, msg
-	mov  rdi, fmt
-	mov  rax, 0
-	call printf
+	  mov rax, 1
+	  mov rdi, 1
+	  mov rsi, msg
+	  mov rdx, msglen
+	  syscall
 
-	mov  eax, 0
-	int  0x80
+	  mov rax, 60
+	  mov rdi, 0
+	  syscall
+
+	section .rodata
+
+msg:	 db "Hello, Holberton", 10
+msglen:	 equ $ - msg
