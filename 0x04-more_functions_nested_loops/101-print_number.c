@@ -1,12 +1,13 @@
 #include "holberton.h"
 #define ABS(x) ((x) < (0) ? (-(x)) : (x))
+int _pow(int x, int y);
 /**
  *print_number - print an integer
  *@n: input integer argument
  */
 void print_number(int n)
 {
-	int div = 1, i = 1, j;
+	int div = 1, i = 1, j, n_i;
 
 	if (n < 0)
 	{
@@ -17,17 +18,20 @@ void print_number(int n)
 	{
 		_putchar(n + '0');
 	}
-	for (; n / div >= 10; div *= 10)
+	else
 	{
-		i++;
+		for (; n / div >= 10; div *= 10)
+		{
+			i++;
+		}
+		n_i = i - 2;
+		_putchar((n / _pow(10, i - 1)) + '0');
+		for (j = n_i; j >= 1; j--)
+		{
+			_putchar(((n / _pow(10, j)) % 10) + '0');
+		}
+		_putchar((n % 10) + '0');
 	}
-	n_i = i - 2;
-	_putchar((n / _pow(10, i - 1)) + '0');
-	for (j = n_i; j >= 1; j--)
-	{
-		_putchar(((n / _pow(10, j)) % 10) + '0');
-	}
-	_putchar((n % 10) + '0');
 }
 /**
  *_pow - returns the value of x raised to the power of y
