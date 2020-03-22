@@ -8,29 +8,30 @@ int _pow(int x, int y);
 void print_number(int n)
 {
 	int div = 1, i = 1, j, n_i;
+	long int h = n;
 
-	if (n < 0)
+	if (h < 0)
 	{
 		_putchar('-');
-		n = ABS(n);
+		h = ABS(h);
 	}
-	if (n >= 0 && n <= 9)
+	if (h >= 0 && h <= 9)
 	{
-		_putchar(n + '0');
+		_putchar(h + '0');
 	}
 	else
 	{
-		for (; n / div >= 10; div *= 10)
+		for (; h / div >= 10; div *= 10)
 		{
 			i++;
 		}
 		n_i = i - 2;
-		_putchar((n / _pow(10, i - 1)) + '0');
+		_putchar((h / _pow(10, i - 1)) + '0');
 		for (j = n_i; j >= 1; j--)
 		{
-			_putchar(((n / _pow(10, j)) % 10) + '0');
+			_putchar(((h / _pow(10, j)) % 10) + '0');
 		}
-		_putchar((n % 10) + '0');
+		_putchar((h % 10) + '0');
 	}
 }
 /**
