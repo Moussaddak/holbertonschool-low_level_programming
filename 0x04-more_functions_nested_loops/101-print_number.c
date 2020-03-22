@@ -8,7 +8,7 @@ int _pow(int x, int y);
 void print_number(int n)
 {
 	int div = 1, i = 1, j, n_i;
-	long int h = n;
+	double h = n;
 
 	if (h < 0)
 	{
