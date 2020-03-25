@@ -22,6 +22,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		new = add_nodeint(head, n);
 		return (new);
 	}
+	else if (i == idx)
+	{
+		new = add_nodeint_end(head, n);
+		return (new);
+	}
 	else if (idx > i)
 	{
 		return (NULL);
@@ -33,15 +38,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		{
 			return (NULL);
 		}
-		for (j = 0; j < idx - 1; j++)
+		else
 		{
-			p_node = p_node->next;
+			for (j = 0; j < idx - 1; j++)
+			{
+				p_node = p_node->next;
+			}
+			new->n = n;
+			new->next = (p_node->next)->next;
+			p_node->next = new;
 		}
-		new->n = n;
-		new->next = p_node->next;
-		p_node->next = new;
-		return (new);
 	}
+	return (new);
 }
 /**
  *add_nodeint - prints number of elements in a linked
