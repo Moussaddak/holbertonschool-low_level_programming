@@ -22,11 +22,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		new = add_nodeint(head, 0);
 		return (new);
 	}
-	else if (i == idx)
-	{
-		new = add_nodeint_end(head, idx);
-		return (new);
-	}
 	else if (idx > i)
 	{
 		return (NULL);
