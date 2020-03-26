@@ -1,6 +1,6 @@
 #include "holberton.h"
 int _pow(int x, int y);
-int _strlen(char *s);
+int _strlen(const char *s);
 /**
  *binary_to_uint - n that converts a binary number to an unsigned int
  *@b: binary number
