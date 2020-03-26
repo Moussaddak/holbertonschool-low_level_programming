@@ -21,7 +21,7 @@ unsigned int binary_to_uint(const char *b)
 		len = _strlen(b) - 1;
 		for (i = len; i >= 0; i--, j++)
 		{
-			if (b[j] != '0' || b[j] == '1')
+			if (b[j] == '0' || b[j] == '1')
 			{
 				br[0] = b[j];
 				result += atoi(br) * _pow(2, i);
