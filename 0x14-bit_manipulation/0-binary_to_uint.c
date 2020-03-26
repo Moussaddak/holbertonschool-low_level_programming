@@ -1,5 +1,6 @@
 #include "holberton.h"
 int _pow(int x, int y);
+int _strlen(char *s);
 /**
  *binary_to_uint - n that converts a binary number to an unsigned int
  *@b: binary number
@@ -16,10 +17,10 @@ unsigned int binary_to_uint(const char *b)
 	}
 	else
 	{
-		len = strlen(b) - 1;
+		len = _strlen(b) - 1;
 		for (i = len; i >= 0; i--, j++)
 		{
-			if (b[j] == '0' || b[j] == '1')
+			if (b[j] != '0' || b[j] == '1')
 			{
 				br[0] = b[j];
 				result += atoi(br) * _pow(2, i);
@@ -46,4 +47,16 @@ int _pow(int x, int y)
 		return (-1);
 	else
 		return (x * _pow(x, y - 1));
+}
+/**
+ *_strlen - prints the length of a string
+ *@s: input
+ *Return: integer
+ */
+int _strlen(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	else
+		return (1 + _strlen(s + 1));
 }
