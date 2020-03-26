@@ -54,7 +54,7 @@ int _pow(int x, int y)
  *@s: input
  *Return: integer
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	if (*s == '\0')
 		return (0);
