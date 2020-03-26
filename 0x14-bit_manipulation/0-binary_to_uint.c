@@ -9,7 +9,8 @@ int _strlen(char *s);
 unsigned int binary_to_uint(const char *b)
 {
 	char br[2] = "\0";
-	int len, i, j = 0, result = 0;
+	int len, i, j = 0;
+	unsigned int result = 0;
 
 	if (!b)
 	{
