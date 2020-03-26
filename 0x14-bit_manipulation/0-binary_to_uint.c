@@ -8,7 +8,6 @@ int _strlen(const char *s);
  */
 unsigned int binary_to_uint(const char *b)
 {
-	char br[2] = "\0";
 	int len, i, j = 0;
 	unsigned int result = 0;
 
@@ -23,8 +22,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			if (b[j] == '0' || b[j] == '1')
 			{
-				br[0] = b[j];
-				result += atoi(br) * _pow(2, i);
+				result += (b[j] - '0') * _pow(2, i);
 			}
 			else
 			{
