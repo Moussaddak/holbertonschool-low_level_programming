@@ -1,0 +1,49 @@
+#include "holberton.h"
+int _pow(int x, int y);
+/**
+ *binary_to_uint - n that converts a binary number to an unsigned int
+ *@b: binary number
+ *Return: decimal number
+ */
+unsigned int binary_to_uint(const char *b)
+{
+	char br[2] = "\0";
+	int len, i, j = 0, result = 0;
+
+	if (!b)
+	{
+		return (0);
+	}
+	else
+	{
+		len = strlen(b) - 1;
+		for (i = len; i >= 0; i--, j++)
+		{
+			if (b[j] == '0' || b[j] == '1')
+			{
+				br[0] = b[j];
+				result += atoi(br) * _pow(2, i);
+			}
+			else
+			{
+				return (0);
+			}
+		}
+		return (result);
+	}
+}
+/**
+ *_pow - returns the value of x raised to the power of y
+ *@x: input
+ *@y: input
+ *Return: integer
+ */
+int _pow(int x, int y)
+{
+	if (y == 0)
+		return (1);
+	else if (y < 0)
+		return (-1);
+	else
+		return (x * _pow(x, y - 1));
+}
