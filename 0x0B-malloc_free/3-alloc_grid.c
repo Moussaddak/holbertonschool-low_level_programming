@@ -25,7 +25,7 @@ int **matrix, i = 0, j, k;
 		*(matrix + i) = malloc(width * sizeof(int));
 		if ((matrix + i) == NULL)
 		{
-			free(*(matrix + i);
+			free(*(matrix + i));
 			free(matrix);
 			return (NULL);
 		}
