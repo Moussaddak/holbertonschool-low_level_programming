@@ -6,11 +6,11 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *table;
+	hash_table_t *table, *h_array;
 
 	if (size > 0)
 	{
-		table = malloc(sizeof(hash_table_t) * size);
+		table = malloc(sizeof(hash_table_t));
 
 		if (!table)
 		{
@@ -18,7 +18,16 @@ hash_table_t *hash_table_create(unsigned long int size)
 		}
 		else
 		{
-			return (table);
+			h_array = malloc(sizeof(hash_table_t) * size);
+			if (!h_array)
+			{
+				free(table);
+				return (NULL);
+			}
+			else
+			{
+				return (table);
+			}
 		}
 	}
 	else
