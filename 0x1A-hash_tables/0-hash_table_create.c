@@ -33,9 +33,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 			{
 				h_array[i] = NULL;
 			}
-			table->size = size;
-			table->array = h_array;
-			return (table);
 		}
+		table->size = size;
+		table->array = h_array;
+		return (table);
 	}
 }
