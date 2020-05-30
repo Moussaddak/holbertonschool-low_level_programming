@@ -14,14 +14,12 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (ht->array[i] && flag)
 		{
-			tmp = ht->array[i]->next;
 			flag = 0;
 			printf("'%s': '%s'", ht->array[i]->key,
 			       ht->array[i]->value);
 		}
 		else if (ht->array[i] && !flag)
 		{
-			tmp = ht->array[i]->next;
 			printf(", '%s': '%s'", ht->array[i]->key,
 			       ht->array[i]->value);
 		}
