@@ -25,14 +25,6 @@ void hash_table_print(const hash_table_t *ht)
 			printf(", '%s': '%s'", ht->array[i]->key,
 			       ht->array[i]->value);
 		}
-/*
-		while (tmp)
-		{
-			printf("'%s': '%s'", tmp->key, tmp->value);
-			tmp = tmp->next;
-			if (tmp)
-				printf(",");
-		}*/
 	}
 	printf("}\n");
 }
