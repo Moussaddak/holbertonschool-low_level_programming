@@ -14,14 +14,16 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < ht->size; i++)
 	{
 		tmp = ht->array[i];
-		if (tmp && flag)
+		if (tmp == NULL)
+			continue;
+		else if (flag)
 		{
 			flag = 0;
 			printf("'%s': '%s'", tmp->key,
 			       tmp->value);
 			tmp = tmp->next;
 		}
-		else if (tmp)
+		else
 		{
 			printf(", '%s': '%s'", tmp->key,
 			       tmp->value);
