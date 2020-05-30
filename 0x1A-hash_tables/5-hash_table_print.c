@@ -13,7 +13,7 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
-		if (t->array[i] != NULL && flag)
+		if (ht->array[i] != NULL && flag)
 		{
 			tmp = ht->array[i]->next;
 			flag = 0;
