@@ -10,6 +10,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int h_index;
 	hash_node_t *node;
 
+	if (!(ht && key))
+		return (NULL);
 	h_index = key_index((const unsigned char *)key, ht->size);
 
 	node = ht->array[h_index];
@@ -23,6 +25,5 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		node = node->next;
 	}
 	/* if key not found or slot is null */
-
 	return (NULL);
 }
