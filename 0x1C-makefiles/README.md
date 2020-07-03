@@ -10,5 +10,3 @@
 4. What are explicit and implicit rules
 5. What are the most common / useful rules
 6. What are variables and how to set and use them
-
-[========]
