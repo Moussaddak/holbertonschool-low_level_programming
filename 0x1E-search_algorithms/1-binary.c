@@ -40,12 +40,12 @@ void print(int *array, size_t size)
 {
 	int i;
 
-	printf("Searching in array:");
+	printf("Searching in array: ");
 	for (i = 0; i < (int)size; i++)
 	{
-		printf(" %d", array[i]);
+		printf("%d", array[i]);
 		if (i != (int)size - 1)
-			printf(",");
+			printf(", ");
 	}
 	printf("\n");
 }
