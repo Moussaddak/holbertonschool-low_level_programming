@@ -20,12 +20,12 @@ int binary_search(int *array, size_t size, int value)
 		while (left <= right)
 		{
 			midpoint = (left + right) / 2;
-			if (array[midpoint] < value)
-				left = midpoint + 1;
-			else if (array[midpoint] > value)
-				right = midpoint;
-			else
+			if (value == midpoint)
 				return (midpoint);
+			else if (array[midpoint] < value)
+				left = midpoint + 1;
+			else
+				right = midpoint;
 			print(array + left, right - left + 1);
 		}
 	}
